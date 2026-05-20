@@ -1,34 +1,39 @@
 [Adblock Plus 2.0]
-! Title: Ultimate Strong Anti-Adblock Defuser 2026
-! Expires: 12 hours
-! -------------------------------------------------------------
+! Title: Full Internet Stealth Cloaking Code
+! Expires: 6 hours
+! =============================================================
 
-! 1. FORCE FAKE SCRIPTS TO LAUNCH (TRICKS THE SITE INTO THINKING ADS LOADED)
-@@||*/ad2.js$script
-@@||*/ads.js$script
-@@||*/adframe.js$script
-@@||*prebid*.js$script
-@@||*googlesyndication.com/pagead/js/adsbygoogle.js$script
-@@||*doubleclick.net/pagead/show_ads.js$script
-
-! 2. DEFUSE RECENT JAVASCRIPT DETECTION ENGINES
-*##+js(nobab)
-*##+js(noeval)
+! 1. CLOAKING VARIABLES (MAKES THE SITE THINK AD INTERNET TRAFFIC IS ACTIVE)
 *##+js(set, google_ad_status, 1)
 *##+js(set, adblock, 0)
+*##+js(set, n_ad, false)
+*##+js(set, abp, false)
+*##+js(set, isAdBlockActive, false)
+*##+js(set, adblockDetected, false)
 
-! 3. HARD REMOVAL OF DYNAMIC ANTI-ADBLOCK OVERLAYS
+! 2. DEFUSE RECENT POPULAR DETECTION ENGINES (NO-BAIT & NO-EVAL)
+*##+js(nobab)
+*##+js(noeval)
+*##+js(nowebrtc)
+
+! 3. ALLOW FAKE SCRIPT BAITS (TRICKS NETWORK SENSORS INTO SAYING "SUCCESS")
+@@||*/ads.js$script
+@@||*/ad2.js$script
+@@||*/adframe.js$script
+@@||*pagead/js/adsbygoogle.js$script
+@@||*doubleclick.net/pagead/show_ads.js$script
+
+! 4. ANTI-ANTI-ADBLOCK ENGINE OVERRIDES
 ||*adblock-detector/*$script
 ||*adblock-detection/*$script
 ||*antiblock.org^$script
-||*sprout-adblock/*$script
 ||*blockadblock.com^$script
 
-! 4. SMASH COOKIE WALLS AND POPUP RE-DIRECT CODES
+! 5. STOP INVISIBLE RE-DIRECT CLICK TRIGGERS & POPUPS
 ||*$popup
 ||*$popunder
 ||*$script,3p
 
-! 5. GENERIC DISMISSAL OF DETECTION WRAPPERS
+! 6. FORCE HIDE VISUAL WARNING OVERLAYS (COSMETIC CLOAKING)
 @@||*^$generichide
 @@||*^$ghide
