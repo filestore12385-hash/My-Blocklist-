@@ -1,0 +1,63 @@
+[Adblock Plus 2.0]
+! Title: 1000% Ultra Fast Load & No-Buffer Engine - ULTIMATE MASTER EDITION
+! Version: 15.0.0 (Global Turbo & Absolute Anti-Redirect Core)
+! Expires: 1 hour
+! -------------------------------------------------------------
+
+! =============================================================
+! 1. PREVENT NETWORK CLOGGING (KILL HEAVY BACKGROUND TRACKING PIXELS)
+! =============================================================
+*metrics*$beacon,third-party
+*analytics*$beacon,third-party
+*telemetry*$beacon,third-party
+*collector*$xhr,third-party
+
+! =============================================================
+! 2. SPEED UP MEDIA PLAYERS (BLOCK EXTRA LOGGING INSIDE VIDEO PLATFORMS)
+! =============================================================
+||github.com^$xhr
+||scorecardresearch.com^$script,third-party
+||doubleclick.net^$script,third-party
+
+! =============================================================
+! 3. AGGRESSIVE CACHE ACCELERATION & CLICK-TRAP DEFUSERS
+! =============================================================
+##+js(set, download_delay, 0)
+##+js(set, wait_time, 0)
+##+js(set, timeout, 0)
+##+js(set, delay, 0)
+##+js(addEventListener-defuser, click)
+##+js(addEventListener-defuser, mousedown)
+##+js(nowebrtc)
+
+! =============================================================
+! 4. KILL EXTRA SCRIPT OVERHEAD & REDIRECT LOOPS (FULL UNIVERSAL BLOCK)
+! =============================================================
+*$websocket,third-party
+*$ping,third-party
+*$popup,important,strict
+*$popunder,important,strict
+||popads.net^$script,important,strict
+||popcash.net^$script,important,strict
+||propellerads.com^$script,important,strict
+||exoclick.com^$script,important,strict
+
+! =============================================================
+! 5. ALLOW CORE VIDEO PACKETS SYSTEM-WIDE (ZERO BUFFER LANES)
+! =============================================================
+@@||googlevideo.com^$media,important
+@@||youtube.com^$media,important
+@@||vimeo.com^$media,important
+@@*cdn*$media,important
+@@*stream*$media,important
+@@*video*$media,important
+@@*player*$media,important
+@@$media,important
+
+! =============================================================
+! 6. FAST DISMISSAL FOR EXTRA CONTAINER ELEMENTS
+! =============================================================
+||adblock-detector^$script,important,strict
+||adblock-detection^$script,important,strict
+@@||*^$generichide
+@@||*^$ghide
