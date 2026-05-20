@@ -26,7 +26,7 @@
 ! =============================================================
 ! 3. GHOST VARIABLES INJECTION (FAKES ADS RENDERING BEFORE THE TUNNEL OPENS)
 ! =============================================================
-! Spoofs the browser environment so tracking scripts freeze and assume ads loaded perfectly
+! Spoof the browser environment so tracking scripts freeze and assume ads loaded perfectly
 ##+js(noopfn, abp)
 ##+js(noopfn, detect)
 ##+js(noopfn, adblock)
