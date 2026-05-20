@@ -1,0 +1,54 @@
+[Adblock Plus 2.0]
+! Title: LogicGlitched Full Universal Anti-Redirect Master Core
+! Version: 14.1.0 (Zero-Exception Popup & Global Link-Lock Engine)
+! Expires: 1 hour
+! -------------------------------------------------------------
+
+! =============================================================
+! 1. 100% ZERO-EXCEPTION GLOBAL POPUP & REDIRECT CRUSHER
+! =============================================================
+*$popup,important,strict
+*$popunder,important,strict
+
+! DEFUSE INVISIBLE CLICK-TRAPS & MALICIOUS SCRIPT HIGHLANDERS
+##+js(addEventListener-defuser, click)
+##+js(addEventListener-defuser, mousedown)
+##+js(nowebrtc)
+
+! =============================================================
+! 2. BYPASS THROTTLED CLOCKS & COUNTDOWN LAYOUT DELAYS
+! =============================================================
+##+js(set, download_delay, 0)
+##+js(set, wait_time, 0)
+##+js(set, timeout, 0)
+##+js(set, delay, 0)
+
+! =============================================================
+! 3. STRIKE DOWN KNOWN REDIRECT TRAFFIC NETWORKS
+! =============================================================
+||popads.net^$script,important,strict
+||popcash.net^$script,important,strict
+||propellerads.com^$script,important,strict
+||exoclick.com^$script,important,strict
+||doubleclick.net^$script,important,strict
+||scorecardresearch.com^$script,important,strict
+
+! =============================================================
+! 4. UNRESTRICTED UNIVERSAL STREAMING PIPELINES (0 BUFFER FOR MEDIA)
+! =============================================================
+@@||googlevideo.com^$media,important
+@@||youtube.com^$media,important
+@@||vimeo.com^$media,important
+@@*cdn*$media,important
+@@*stream*$media,important
+@@*video*$media,important
+@@*player*$media,important
+@@$media,important
+
+! =============================================================
+! 5. INSTANT CLEAN RENDERING & ANTI-DETECTION INTERCEPT
+! =============================================================
+||adblock-detector^$script,important,strict
+||adblock-detection^$script,important,strict
+@@||*^$generichide
+@@||*^$ghide
