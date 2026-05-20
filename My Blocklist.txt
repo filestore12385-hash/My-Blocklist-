@@ -1,10 +1,16 @@
 [Adblock Plus 2.0]
-! Title: My Personal Blocklist
+! Title: My Strong Personal Blocklist
+! Expires: 1 days
 ! -------------------------------------------------------------
 
-*$popunder
-*$popup
+! 1. STOPS ALL POPUPS & DOUBLE-CLICK REDIRECTS ON ANY SITE
+||*$popup
+||*$popunder
 
+! 2. BLOCKS INVISIBLE CLICK OVERLAYS
+||*$script,3p
+
+! 3. BLOCKS SPECIFIC AD SERVERS
 ||onclicka.com^
 ||popads.net^
 ||propellerads.com^
