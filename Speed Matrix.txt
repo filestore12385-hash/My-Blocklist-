@@ -1,0 +1,44 @@
+[Adblock Plus 2.0]
+! Title: LogicGlitched Universal Speed Matrix v9.0
+! Version: 9.0.0 (Safe High-Speed & Clean Layout Engine)
+! Expires: 2 hours
+! -------------------------------------------------------------
+
+! =============================================================
+! 1. NO BACKGROUND RUN (KILLS HEAVY LOGGING WITHOUT BREAKING BANKS)
+! =============================================================
+||*$beacon,third-party,important
+||*$ping,third-party,important
+||*metrics*^$xhr,third-party,domain=~paytm.com|~phonepe.com|~google.com
+||*analytics*^$xhr,third-party,domain=~paytm.com|~phonepe.com|~google.com
+||scorecardresearch.com^$script,third-party
+||doubleclick.net^$script,third-party
+
+! =============================================================
+! 2. ANTI-REDIRECT & ORIGINAL LINK ENFORCER (NO POPUPS / NO DOUBLE CLICKS)
+! =============================================================
+||*$popup,domain=~google.com|~youtube.com|~drive.google.com,important
+||*$popunder,domain=~google.com|~youtube.com,important
+*##+js(set, download_delay, 0)
+*##+js(set, wait_time, 0)
+*##+js(set, timeout, 0)
+
+! =============================================================
+! 3. FULL CLEAN LAYOUT (COLLAPSES EMPTY SPACE STYLING)
+! =============================================================
+||*adblock-detector/*$script
+||*adblock-detection/*$script
+@@||*^$generichide
+@@||*^$ghide
+
+! =============================================================
+! 4. HIGH-SPEED DOWNLOAD PIPELINES (50MB - 70MB UNRESTRICTED BYPASS)
+! =============================================================
+@@||googlevideo.com^$media,important
+@@||*cdn*^$media,important
+@@||*stream*^$media,important
+@@||*video*^$media,important
+@@||*download*^$media,important
+@@||*.zip^$media,important
+@@||*.apk^$media,important
+@@||*.mp4^$media,important
