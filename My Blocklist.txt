@@ -1,0 +1,10 @@
+[Adblock Plus 2.0]
+! Title: My Personal Blocklist
+! -------------------------------------------------------------
+
+*$popunder
+*$popup
+
+||onclicka.com^
+||popads.net^
+||propellerads.com^
