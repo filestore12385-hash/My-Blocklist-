@@ -1,0 +1,47 @@
+[Adblock Plus 2.0]
+! Title: LogicGlitched Universal Media Accelerator Engine v11.5
+! Version: 11.5.0 (Global Zero-Buffer & Ultimate Link Lock Core)
+! Expires: 1 hour
+! -------------------------------------------------------------
+
+! =============================================================
+! 1. UNIVERSAL BACKGROUND BLANKET CRUSHER (APPLIES TO EVERY SITE)
+! =============================================================
+||*$beacon,third-party,important
+||*$ping,third-party,important
+||scorecardresearch.com^$script,third-party,important
+||doubleclick.net^$script,third-party,important
+
+! EXPLICIT STREAM PROTECTOR (PREVENTS BACKGROUND BLOCKS FROM BREAKING VIDEO FLOW)
+||*metrics*^$xhr,third-party,domain=~googlevideo.com|~youtube.com|~vimeo.com
+||*analytics*^$xhr,third-party,domain=~googlevideo.com|~youtube.com|~vimeo.com
+
+! =============================================================
+! 2. ABSOLUTE ORIGINAL LINK LOCKED ENFORCER (GLOBAL POPUP BAN)
+! =============================================================
+||*$popup,domain=~google.com|~youtube.com|~drive.google.com|~github.com,important
+||*$popunder,domain=~google.com|~youtube.com|~drive.google.com|~github.com,important
+*##+js(set, download_delay, 0)
+*##+js(set, wait_time, 0)
+*##+js(set, timeout, 0)
+*##+js(set, delay, 0)
+
+! =============================================================
+! 3. UNRESTRICTED UNIVERSAL MEDIA PIPELINES (ZERO BUFFERING SYSTEM-WIDE)
+! =============================================================
+@@||googlevideo.com^$media,important
+@@||youtube.com^$media,important
+@@||vimeo.com^$media,important
+@@||*cdn*^$media,important
+@@||*stream*^$media,important
+@@||*video*^$media,important
+@@||*player*^$media,important
+@@$media,important
+
+! =============================================================
+! 4. GLOBAL CLEAN LAYOUT CONTAINER INTEGRATION
+! =============================================================
+||*adblock-detector/*$script
+||*adblock-detection/*$script
+@@||*^$generichide
+@@||*^$ghide
