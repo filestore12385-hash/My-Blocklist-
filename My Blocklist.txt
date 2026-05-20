@@ -1,16 +1,11 @@
-[Adblock Plus 2.0]
-! Title: My Strong Personal Blocklist
-! Expires: 1 days
-! -------------------------------------------------------------
+! --- ANTI-ADBLOCK DETECTOR BYPASS RULES ---
+@@||*/ad2.js$script
+@@||*/ads.js$script
+@@||*/adframe.js$script
+@@||*prebid*.js$script
 
-! 1. STOPS ALL POPUPS & DOUBLE-CLICK REDIRECTS ON ANY SITE
-||*$popup
-||*$popunder
+! --- CRUSH POPUP COOKIE AND WALL OVERLAYS ---
+||*adblock-detector/*$script
+||*adblock-detection/*$script
+||*antiblock.org^$script
 
-! 2. BLOCKS INVISIBLE CLICK OVERLAYS
-||*$script,3p
-
-! 3. BLOCKS SPECIFIC AD SERVERS
-||onclicka.com^
-||popads.net^
-||propellerads.com^
