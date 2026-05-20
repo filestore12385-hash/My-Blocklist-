@@ -1,11 +1,34 @@
-! --- ANTI-ADBLOCK DETECTOR BYPASS RULES ---
+[Adblock Plus 2.0]
+! Title: Ultimate Strong Anti-Adblock Defuser 2026
+! Expires: 12 hours
+! -------------------------------------------------------------
+
+! 1. FORCE FAKE SCRIPTS TO LAUNCH (TRICKS THE SITE INTO THINKING ADS LOADED)
 @@||*/ad2.js$script
 @@||*/ads.js$script
 @@||*/adframe.js$script
 @@||*prebid*.js$script
+@@||*googlesyndication.com/pagead/js/adsbygoogle.js$script
+@@||*doubleclick.net/pagead/show_ads.js$script
 
-! --- CRUSH POPUP COOKIE AND WALL OVERLAYS ---
+! 2. DEFUSE RECENT JAVASCRIPT DETECTION ENGINES
+*##+js(nobab)
+*##+js(noeval)
+*##+js(set, google_ad_status, 1)
+*##+js(set, adblock, 0)
+
+! 3. HARD REMOVAL OF DYNAMIC ANTI-ADBLOCK OVERLAYS
 ||*adblock-detector/*$script
 ||*adblock-detection/*$script
 ||*antiblock.org^$script
+||*sprout-adblock/*$script
+||*blockadblock.com^$script
 
+! 4. SMASH COOKIE WALLS AND POPUP RE-DIRECT CODES
+||*$popup
+||*$popunder
+||*$script,3p
+
+! 5. GENERIC DISMISSAL OF DETECTION WRAPPERS
+@@||*^$generichide
+@@||*^$ghide
