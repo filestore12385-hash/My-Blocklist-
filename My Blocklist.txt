@@ -1,39 +1,42 @@
 [Adblock Plus 2.0]
-! Title: Full Internet Stealth Cloaking Code
+! Title: Global Universal Stealth Bypass (All Websites)
 ! Expires: 6 hours
-! =============================================================
+! -------------------------------------------------------------
 
-! 1. CLOAKING VARIABLES (MAKES THE SITE THINK AD INTERNET TRAFFIC IS ACTIVE)
+! 1. GLOBAL BAIT HOOKS (TRICKS EVERY SITE INTO DETECTING ACTIVE AD CONNECTIONS)
+@@||*/ads.js$script
+@@||*/ad2.js$script
+@@||*/adframe.js$script
+@@||*pagead/js/adsbygoogle.js$script
+@@||*doubleclick.net/pagead/show_ads.js$script
+@@||*google-analytics.com/analytics.js$script
+
+! 2. UNIVERSAL ENGINE INJECTIONS (FEEDS FAKE "FALSE" SIGNALS SYSTEM-WIDE)
 *##+js(set, google_ad_status, 1)
 *##+js(set, adblock, 0)
 *##+js(set, n_ad, false)
 *##+js(set, abp, false)
 *##+js(set, isAdBlockActive, false)
 *##+js(set, adblockDetected, false)
+*##+js(set, AmIUsingAdblocker, false)
 
-! 2. DEFUSE RECENT POPULAR DETECTION ENGINES (NO-BAIT & NO-EVAL)
-*##+js(nobab)
-*##+js(noeval)
-*##+js(nowebrtc)
-
-! 3. ALLOW FAKE SCRIPT BAITS (TRICKS NETWORK SENSORS INTO SAYING "SUCCESS")
-@@||*/ads.js$script
-@@||*/ad2.js$script
-@@||*/adframe.js$script
-@@||*pagead/js/adsbygoogle.js$script
-@@||*doubleclick.net/pagead/show_ads.js$script
-
-! 4. ANTI-ANTI-ADBLOCK ENGINE OVERRIDES
+! 3. CRUSH KNOWN THIRD-PARTY DETECTION SCRIPTS
 ||*adblock-detector/*$script
 ||*adblock-detection/*$script
 ||*antiblock.org^$script
 ||*blockadblock.com^$script
+||*prebid*.js$script
 
-! 5. STOP INVISIBLE RE-DIRECT CLICK TRIGGERS & POPUPS
+! 4. DEFUSE BEHAVIOR SNIFFERS (PREVENTS SITES FROM TESTING YOUR BROWSER)
+*##+js(nobab)
+*##+js(noeval)
+*##+js(nowebrtc)
+
+! 5. STOP INVISIBLE POPUP WALL TRIGGERS SYSTEM-WIDE
 ||*$popup
 ||*$popunder
 ||*$script,3p
 
-! 6. FORCE HIDE VISUAL WARNING OVERLAYS (COSMETIC CLOAKING)
+! 6. GLOBAL COSMETIC OVERRIDE (FORCE HIDE ANY REMAINING WARNING BOXES)
 @@||*^$generichide
 @@||*^$ghide
