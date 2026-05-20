@@ -1,14 +1,14 @@
 [Adblock Plus 2.0]
 ! Title: LogicGlitched Universal Page Turbo Engine - MAXIMUM SPEED FINAL MASTER
-! Version: 13.0.1 (Instant Load & Global Layout Fast-Track Core)
+! Version: 13.0.2 (Instant Load & Global Layout Fast-Track Core - CERTIFIED MASTER)
 ! Expires: 1 hour
 ! -------------------------------------------------------------
 
 ! =============================================================
 ! 1. FORCE INSTANT PAGE LAYOUT LOADING (WEBSITE SPEED ACCELERATION)
 ! =============================================================
-||$third-party,important,strict,domain=~google.com|~youtube.com|~github.com|~drive.google.com
-||$subdocument,third-party,important,strict
+*$third-party,important,strict,domain=~google.com|~youtube.com|~github.com|~drive.google.com
+*$subdocument,important,strict
 ##+js(set, download_delay, 0)
 ##+js(set, wait_time, 0)
 ##+js(set, timeout, 0)
@@ -17,8 +17,8 @@
 ! =============================================================
 ! 2. SMASH HEAVY BACKGROUND RESOURCE BOTTLENECK (PREVENTS NETWORK CLOGGING)
 ! =============================================================
-||$beacon,third-party,important,strict
-||$ping,third-party,important,strict
+*$beacon,important,strict
+*$ping,important,strict
 ||scorecardresearch.com^$script,third-party,important,strict
 ||doubleclick.net^$script,third-party,important,strict
 ||metrics^$xhr,third-party,important,strict,domain=~googlevideo.com|~youtube.com|~vimeo.com
@@ -30,17 +30,17 @@
 @@||googlevideo.com^$media,important
 @@||youtube.com^$media,important
 @@||vimeo.com^$media,important
-@@||cdn*$media,important
-@@||stream*$media,important
-@@||video*$media,important
-@@||player*$media,important
+@@*cdn*$media,important
+@@*stream*$media,important
+@@*video*$media,important
+@@*player*$media,important
 @@$media,important
 
 ! =============================================================
 ! 4. ABSOLUTE REDIRECT BAN & ANTI-ADBLOCK DISMISSAL
 ! =============================================================
-||$popup,domain=~google.com|~youtube.com|~drive.google.com|~github.com,important,strict
-||$popunder,domain=~google.com|~youtube.com|~drive.google.com|~github.com,important,strict
+*$popup,important,strict,domain=~google.com|~youtube.com|~drive.google.com|~github.com
+*$popunder,important,strict,domain=~google.com|~youtube.com|~drive.google.com|~github.com
 ||adblock-detector^$script,important,strict
 ||adblock-detection^$script,important,strict
 @@||*^$generichide
