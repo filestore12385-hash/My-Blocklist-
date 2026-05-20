@@ -1,42 +1,26 @@
 [Adblock Plus 2.0]
-! Title: Global Universal Stealth Bypass (All Websites)
-! Expires: 6 hours
+! Title: Ultimate Link Shortener & Redirect Bypass
+! Expires: 12 hours
 ! -------------------------------------------------------------
 
-! 1. GLOBAL BAIT HOOKS (TRICKS EVERY SITE INTO DETECTING ACTIVE AD CONNECTIONS)
-@@||*/ads.js$script
-@@||*/ad2.js$script
-@@||*/adframe.js$script
-@@||*pagead/js/adsbygoogle.js$script
-@@||*doubleclick.net/pagead/show_ads.js$script
-@@||*google-analytics.com/analytics.js$script
+! 1. GLOBAL STRIPPER FOR KNOWN INTERMEDIATE LINK TRAFFIC
+||*$redirect-rule,third-party
+||*$rewrite=empty
 
-! 2. UNIVERSAL ENGINE INJECTIONS (FEEDS FAKE "FALSE" SIGNALS SYSTEM-WIDE)
-*##+js(set, google_ad_status, 1)
-*##+js(set, adblock, 0)
-*##+js(set, n_ad, false)
-*##+js(set, abp, false)
-*##+js(set, isAdBlockActive, false)
-*##+js(set, adblockDetected, false)
-*##+js(set, AmIUsingAdblocker, false)
+! 2. BYPASS TIMER RE-DIRECTS AND FORCED WAITING PAGES
+*##+js(set, download_delay, 0)
+*##+js(set, wait_time, 0)
+*##+js(set, counter, 0)
+*##+js(set, seconds, 0)
 
-! 3. CRUSH KNOWN THIRD-PARTY DETECTION SCRIPTS
-||*adblock-detector/*$script
-||*adblock-detection/*$script
-||*antiblock.org^$script
-||*blockadblock.com^$script
-||*prebid*.js$script
+! 3. CRUSH HIDDEN CLICK COUNTERS & LINK TRACKERS
+||*link-protector/*$script
+||*link-shortener/*$script
+||*safelink/*$script
 
-! 4. DEFUSE BEHAVIOR SNIFFERS (PREVENTS SITES FROM TESTING YOUR BROWSER)
-*##+js(nobab)
-*##+js(noeval)
-*##+js(nowebrtc)
+! 4. BYPASS POPUPS WHEN CLICKING "GET LINK" OR "CONTINUE" BUTTONS
+||*$popup,domain=~google.com|~youtube.com
+||*$popunder,domain=~google.com|~youtube.com
 
-! 5. STOP INVISIBLE POPUP WALL TRIGGERS SYSTEM-WIDE
-||*$popup
-||*$popunder
-||*$script,3p
-
-! 6. GLOBAL COSMETIC OVERRIDE (FORCE HIDE ANY REMAINING WARNING BOXES)
+! 5. FORCE OPEN DOCK ELEMENTS AND HIDDEN RE-DIRECT TARGETS
 @@||*^$generichide
-@@||*^$ghide
