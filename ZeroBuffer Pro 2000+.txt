@@ -1,0 +1,59 @@
+[Adblock Plus 2.0]
+! Title: LogicGlitched Master Engine v8.0 - 2000x Core Overclock
+! Version: 8.0.0 (Ultimate Data & Stream Acceleration Core)
+! Expires: 1 hour
+! -------------------------------------------------------------
+
+! =============================================================
+! SECTION 1: 2000X NETWORK FIREWALL (KILLS BEACONS & TELEMETRY STACKS)
+! =============================================================
+||*$beacon,third-party,important,strict
+||*$ping,third-party,important,strict
+||*$websocket,third-party,important,strict
+||*$csp=script-src 'self' 'unsafe-inline' 'unsafe-eval' *,third-party,important
+||*metrics*^$xhr,third-party,important,strict
+||*analytics*^$xhr,third-party,important,strict
+||*telemetry*^$xhr,third-party,important,strict
+||*collector*^$xhr,third-party,important,strict
+||*log*^$xhr,third-party,important,strict
+||scorecardresearch.com^$script,third-party,important,strict
+||doubleclick.net^$script,third-party,important,strict
+||*stats.github.com^$xhr,important
+||*collector.githubapp.com^$xhr,important
+
+! =============================================================
+! SECTION 2: SYSTEM VARIABLE TIMER MATRIX & DELAY EXTINCTION
+! =============================================================
+*##+js(set, download_delay, 0)
+*##+js(set, wait_time, 0)
+*##+js(set, timeout, 0)
+*##+js(set, delay, 0)
+*##+js(set, counter, 0)
+*##+js(set, timer, 0)
+*##+js(set, countdown, 0)
+
+! =============================================================
+! SECTION 3: DEEP SCRIPTLET OVERRIDES (SAVES PROCESSOR CYCLE LAG)
+! =============================================================
+*##+js(noeval)
+*##+js(nowebrtc)
+*##+js(json-prune, telemetry analytics tracking metrics)
+
+! =============================================================
+! SECTION 4: UNRESTRICTED MULTI-CHANNEL MEDIA LANES (ZERO BUFFER 4K)
+! =============================================================
+@@||googlevideo.com^$media,important
+@@||youtube.com^$media,important
+@@||vimeo.com^$media,important
+@@||*cdn*^$media,important
+@@||*stream*^$media,important
+@@||*video*^$media,important
+@@||*player*^$media,important
+@@||*media*^$media,important
+@@||*cache*^$media,important
+
+! =============================================================
+! SECTION 5: GLOBAL LAYOUT COSMETIC HARMONIZATION
+! =============================================================
+@@||*^$generichide
+@@||*^$ghide
