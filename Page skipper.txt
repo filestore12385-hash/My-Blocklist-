@@ -1,0 +1,57 @@
+[Adblock Plus 2.0]
+! Title: LogicGlitched Universal Page-Skipper & Instant Link Core
+! Version: 18.0.0 (Zero Intermediate Pages & Apps-Safe Hyper Drive)
+! Expires: 1 hour
+! -------------------------------------------------------------
+
+! =============================================================
+! 1. APP PROTECTION LANE (PREVENTS BREAKING LOGINS & CRITICAL APPS)
+! =============================================================
+@@||github.com^$xhr,subdocument,script,important
+@@||githubapp.com^$xhr,subdocument,script,important
+@@||google.com^$xhr,subdocument,script,important
+@@||drive.google.com^$xhr,subdocument,script,important
+@@||firebaseio.com^$websocket,xhr,important
+
+! =============================================================
+! 2. UNIVERSAL TIMEOUT SMASHER (FAST-FORWARDS DELAY & SKIP PAGES)
+! =============================================================
+! Tricks intermediate countdown layouts into thinking the wait time is already 0
+##+js(set, download_delay, 0)
+##+js(set, wait_time, 0)
+##+js(set, timeout, 0)
+##+js(set, delay, 0)
+##+js(set, interval, 0)
+
+! DEFUSE THE VISUAL CLICKS THAT LOCK YOU ON INTERMEDIATE PAGES
+##+js(addEventListener-defuser, click)
+##+js(addEventListener-defuser, mousedown)
+##+js(nowebrtc)
+
+! =============================================================
+! 3. FULL TUNNEL BYPASS FOR THE FINAL DOWNLOAD DATA
+! =============================================================
+! Forces the browser to pull raw file bytes immediately without getting stuck in web loops
+@@$media,important
+@@$other,important
+@@$object,important
+@@$subdocument,important
+
+! =============================================================
+! 4. KILL SNEAKY SPAM POPUPS WHEN CLICKING "CONTINUE" BUTTONS
+! =============================================================
+! Keeps you firmly on track to the final page instead of spawning 5 ad tabs
+||popads.net^$script,important,strict
+||popcash.net^$script,important,strict
+||propellerads.com^$script,important,strict
+||exoclick.com^$script,important,strict
+||adsco.re^$script,important,strict
+*$ping,third-party,important,strict
+
+! =============================================================
+! 5. CLEAN INTERFACE RENDERING
+! =============================================================
+||adblock-detector^$script,important,strict
+||adblock-detection^$script,important,strict
+@@||*^$generichide
+@@||*^$ghide
