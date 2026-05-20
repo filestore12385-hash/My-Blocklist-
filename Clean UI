@@ -1,0 +1,40 @@
+[Adblock Plus 2.0]
+! Title: LogicGlitched Universal Layout Restoration & Clean UI Engine - MASTER UPGRADE
+! Version: 33.0.0 (Absolute Cosmetic Optimization & Global Scroll Recovery)
+! Expires: 1 hour
+! -------------------------------------------------------------
+
+! =============================================================
+! 1. WORKSPACE IMMUNITY LANE (NEVER ALTER CORE DEV STACKS)
+! =============================================================
+! High-priority exclusions to ensure your development dashboards always load perfectly
+@@||github.com^$generichide,ghide
+@@||githubapp.com^$generichide,ghide
+@@||google.com^$generichide,ghide
+@@||drive.google.com^$generichide,ghide
+
+! =============================================================
+! 2. UNIVERSAL ELEMENT DEFUSE (ELIMINATES BLANK WHITESPACE GAPS)
+! =============================================================
+! Targets empty block structures left behind by your blocker and collapses them to 0px
+*##.ad, .ads, .advert, .ad-box, .ad-banner, .ad-wrap, .ad-wrapper, .ad-container, .adsbygoogle { display: none !important; height: 0px !important; min-height: 0px !important; margin: 0px !important; padding: 0px !important; visibility: hidden !important; opacity: 0 !important; }
+*##[class*="ad-"], [id*="ad-"], [class*="adbox"], [id*="adbox"], [class*="sponsor"], [id*="sponsor"] { display: none !important; height: 0px !important; min-height: 0px !important; margin: 0px !important; padding: 0px !important; }
+
+! =============================================================
+! 3. ANTI-SCREEN DIMMING & OVERLAY REMOVAL
+! =============================================================
+! Clear out gray, transparent, or dark background sheets that block your clicks
+*##.modal-backdrop, .overlay, .fade.in, [class*="popup-overlay"], [id*="popup-overlay"], [class*="blocking-layer"] { display: none !important; opacity: 0 !important; pointer-events: none !important; z-index: -9999 !important; }
+
+! =============================================================
+! 4. UNIVERSAL SCROLL RESTORATION (FORCES SMOOTH NAVIGATION)
+! =============================================================
+! Overrides websites that lock your page scrolling mechanics when layouts shift
+*##body, html { overflow: auto !important; overflow-x: hidden !important; scroll-behavior: smooth !important; height: auto !important; }
+
+! =============================================================
+! 5. CLEAN CONTEXT BUFFER (NATIVE INTERACTIVE PASSES)
+! =============================================================
+! Connects your custom cleanup rules with live, native extension visual filters
+@@||*^$generichide
+@@||*^$ghide
