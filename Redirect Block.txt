@@ -1,54 +1,52 @@
 [Adblock Plus 2.0]
-! Title: LogicGlitched Full Universal Anti-Redirect Master Core
-! Version: 14.1.0 (Zero-Exception Popup & Global Link-Lock Engine)
+! Title: LogicGlitched 10-Padma Universal Redirect Destruction Core - FULLY LOADED
+! Version: 36.0.0 (Absolute Window Anchor & Touch-Hijack Defuser)
 ! Expires: 1 hour
 ! -------------------------------------------------------------
 
 ! =============================================================
-! 1. 100% ZERO-EXCEPTION GLOBAL POPUP & REDIRECT CRUSHER
+! 1. CRITICAL WORKSPACE IMMUNITY LANE (PREVENTS BREAKING SECURE APPS)
 ! =============================================================
-*$popup,important,strict
-*$popunder,important,strict
-
-! DEFUSE INVISIBLE CLICK-TRAPS & MALICIOUS SCRIPT HIGHLANDERS
-##+js(addEventListener-defuser, click)
-##+js(addEventListener-defuser, mousedown)
-##+js(nowebrtc)
+@@||github.com^$popup,popunder,important
+@@||githubapp.com^$popup,popunder,important
+@@||google.com^$popup,popunder,important
+@@||drive.google.com^$popup,popunder,important
+@@||firebaseio.com^$popup,popunder,important
 
 ! =============================================================
-! 2. BYPASS THROTTLED CLOCKS & COUNTDOWN LAYOUT DELAYS
+! 2. KILLS ALL WINDOW CREATION REQUESTS AT THE BROWSER ROOT
 ! =============================================================
-##+js(set, download_delay, 0)
-##+js(set, wait_time, 0)
-##+js(set, timeout, 0)
-##+js(set, delay, 0)
+*^$popup,third-party,important,strict
+*^$popunder,third-party,important,strict
+*^$ping,third-party,important,strict
 
 ! =============================================================
-! 3. STRIKE DOWN KNOWN REDIRECT TRAFFIC NETWORKS
+! 3. INPUT LISTENER DEFUSERS (VAPORIZES INVISIBLE CLICK-JACK OVERLAYS)
+! =============================================================
+*##+js(addEventListener-defuser, click)
+*##+js(addEventListener-defuser, mousedown)
+*##+js(addEventListener-defuser, mouseup)
+*##+js(addEventListener-defuser, submit)
+
+! =============================================================
+! 4. WINDOW OPEN COMMAND NEUTRALIZATION MATRIX
+! =============================================================
+*##+js(noopfn, window.open)
+*##+js(noopfn, window.showModalDialog)
+*##+js(noopfn, window.alert)
+*##+js(noopfn, window.confirm)
+
+! =============================================================
+! 5. SPECIFIC HIGH-DANGER REDIRECT DISTRIBUTION HOSTS (HARD TERMINATION)
 ! =============================================================
 ||popads.net^$script,important,strict
 ||popcash.net^$script,important,strict
 ||propellerads.com^$script,important,strict
 ||exoclick.com^$script,important,strict
-||doubleclick.net^$script,important,strict
-||scorecardresearch.com^$script,important,strict
+||adsco.re^$script,important,strict
 
 ! =============================================================
-! 4. UNRESTRICTED UNIVERSAL STREAMING PIPELINES (0 BUFFER FOR MEDIA)
+! 6. GLOBAL RENDERING RECOVERY BUFFER
 ! =============================================================
-@@||googlevideo.com^$media,important
-@@||youtube.com^$media,important
-@@||vimeo.com^$media,important
-@@*cdn*$media,important
-@@*stream*$media,important
-@@*video*$media,important
-@@*player*$media,important
-@@$media,important
-
-! =============================================================
-! 5. INSTANT CLEAN RENDERING & ANTI-DETECTION INTERCEPT
-! =============================================================
-||adblock-detector^$script,important,strict
-||adblock-detection^$script,important,strict
 @@||*^$generichide
 @@||*^$ghide
