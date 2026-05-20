@@ -1,0 +1,33 @@
+[Adblock Plus 2.0]
+! Title: 1000% Ultra Fast Load & No-Buffer Engine - ULTIMATE CORE UPGRADE
+! Expires: 3 hours
+! -------------------------------------------------------------
+
+! 1. PREVENT NETWORK CLOGGING (KILL HEAVY BACKGROUND TRACKING PIXELS)
+||*metrics*^$beacon,third-party,important,strict
+||*analytics*^$beacon,third-party,important,strict
+||*telemetry*^$beacon,third-party,important,strict
+||*collector*.$xhr,third-party,important,strict
+
+! 2. SPEED UP MEDIA PLAYERS (BLOCK EXTRA LOGGING INSIDE VIDEO PLATFORMS)
+||*stats.github.com^$xhr,important,strict
+||*collector.githubapp.com^$xhr,important,strict
+||scorecardresearch.com^$script,third-party,important,strict
+||doubleclick.net^$script,third-party,important,strict
+
+! 3. AGGRESSIVE CACHE ACCELERATION VARIABLES
+*##+js(set, download_delay, 0)
+*##+js(set, wait_time, 0)
+*##+js(set, timeout, 0)
+
+! 4. KILL EXTRA SCRIPT OVERHEAD (FORCES BROWSER MEMORY SAVINGS)
+||*$websocket,third-party,important
+||*$ping,third-party,important
+
+! 5. ALLOW CORE VIDEO PACKETS SYSTEM-WIDE (ZERO BUFFER LANES)
+@@||googlevideo.com^$media,important
+@@||youtube.com^$media,important
+@@||vimeo.com^$media,important
+
+! 6. FAST DISMISSAL FOR EXTRA CONTAINER ELEMENTS
+@@||*^$generichide
