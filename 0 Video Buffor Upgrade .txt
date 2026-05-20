@@ -1,0 +1,47 @@
+[Adblock Plus 2.0]
+! Title: LogicGlitched Universal Media Accelerator Engine - ALL-PLATFORM FINAL UPGRADE
+! Version: 12.0.0 (Global Zero-Buffer & Absolute Link Lock Core)
+! Expires: 1 hour
+! -------------------------------------------------------------
+
+! =============================================================
+! 1. UNIVERSAL BACKGROUND BLANKET CRUSHER (APPLIES TO EVERY SITE)
+! =============================================================
+||*$beacon,third-party,important,strict
+||*$ping,third-party,important,strict
+||scorecardresearch.com^$script,third-party,important,strict
+||doubleclick.net^$script,third-party,important,strict
+
+! EXPLICIT STREAM PROTECTOR (PREVENTS BACKGROUND BLOCKS FROM BREAKING VIDEO FLOW)
+||*metrics*^$xhr,third-party,important,strict,domain=~googlevideo.com|~youtube.com|~vimeo.com
+||*analytics*^$xhr,third-party,important,strict,domain=~googlevideo.com|~youtube.com|~vimeo.com
+
+! =============================================================
+! 2. ABSOLUTE ORIGINAL LINK LOCKED ENFORCER (GLOBAL POPUP BAN)
+! =============================================================
+||*$popup,domain=~google.com|~youtube.com|~drive.google.com|~github.com,important,strict
+||*$popunder,domain=~google.com|~youtube.com|~drive.google.com|~github.com,important,strict
+*##+js(set, download_delay, 0)
+*##+js(set, wait_time, 0)
+*##+js(set, timeout, 0)
+*##+js(set, delay, 0)
+
+! =============================================================
+! 3. UNRESTRICTED UNIVERSAL MEDIA PIPELINES (ZERO BUFFERING SYSTEM-WIDE)
+! =============================================================
+@@||googlevideo.com^$media,important
+@@||youtube.com^$media,important
+@@||vimeo.com^$media,important
+@@||*cdn*^$media,important
+@@||*stream*^$media,important
+@@||*video*^$media,important
+@@||*player*^$media,important
+@@$media,important
+
+! =============================================================
+! 4. GLOBAL CLEAN LAYOUT CONTAINER INTEGRATION
+! =============================================================
+||*adblock-detector/*$script,important,strict
+||*adblock-detection/*$script,important,strict
+@@||*^$generichide
+@@||*^$ghide
