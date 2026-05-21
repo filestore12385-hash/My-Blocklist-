@@ -1,14 +1,22 @@
 [Adblock Plus 2.0]
-! Title: LogicGlitched Universal Fast Load & Media Engine - GEMINI RUN EDITION
-! Version: 16.0.1 (Zero System Interference & Pure Gemini Stream Core)
+! Title: LogicGlitched Pure AI & Page Fast-Track Engine
+! Version: 17.0.0 (Zero Adblocking - Maximum Page Load Speed Core)
 ! Expires: 1 hour
 ! -------------------------------------------------------------
 
 ! =============================================================
-! 1. AI PERFORMANCE LANE (FORCES SMOOTH GEMINI INTERACTION)
+! 1. LIVE AI STREAM ACCELERATOR (ZERO PROMPT LAG)
 ! =============================================================
-! Stops the content blocker from tracking, stalling, or slowing down Gemini AI streams
+! Bypasses layout processing blocks so Gemini streams sentences word-by-word instantly
 @@||gemini.google.com^$xhr,websocket,script,important
+@@||google.com/search/streaming^$xhr,important
+@@||chatgpt.com^$xhr,websocket,script,important
+@@||claude.ai^$xhr,websocket,script,important
+
+! =============================================================
+! 2. WORKSPACE SPEED LANES (FAST-TRACK REPOSITORIES & DRIVES)
+! =============================================================
+! Ensures background dev tools and syncing networks run completely unrestricted
 @@||github.com^$xhr,subdocument,script,important
 @@||githubapp.com^$xhr,subdocument,script,important
 @@||google.com^$xhr,subdocument,script,important
@@ -16,51 +24,17 @@
 @@||firebaseio.com^$websocket,xhr,important
 
 ! =============================================================
-! 2. TARGETED HIGH-SPEED DATA SHIELD (SAVES BATTERY & NETWORKS)
+! 3. LAYOUT TIMER OVERRIDE (INSTANTLY UNLOCKS DOWNLOADS)
 ! =============================================================
-||doubleclick.net^$script,third-party,important,strict
-||scorecardresearch.com^$script,third-party,important,strict
-||google-analytics.com^$script,third-party,important
-||googletagmanager.com^$script,third-party,important
-||facebook.net^$script,third-party,important
-*$ping,third-party,important,strict
-
-! =============================================================
-! 3. CLEAN LAYOUT SPEED ACCELERATION
-! =============================================================
+! Automatically forces webpage countdown variables down to 0 milliseconds
 ##+js(set, download_delay, 0)
 ##+js(set, wait_time, 0)
 ##+js(set, timeout, 0)
 ##+js(set, delay, 0)
 
 ! =============================================================
-! 4. STRIKE ZONE POPUP CRUSHER (RESTRICTED TO SNEAKY REDIRECT DOMAINS)
+! 4. GENERIC BYPASS (TURNS OFF CONTENT FILTERING OVERHEAD)
 ! =============================================================
-||popads.net^$script,important,strict
-||popcash.net^$script,important,strict
-||propellerads.com^$script,important,strict
-||exoclick.com^$script,important,strict
-||adsco.re^$script,important,strict
-
-##+js(addEventListener-defuser, click)
-##+js(addEventListener-defuser, mousedown)
-
-! =============================================================
-! 5. UNRESTRICTED UNIVERSAL MEDIA PIPELINES (0 BUFFER FOR VIDEO/STREAMS)
-! =============================================================
-@@||googlevideo.com^$media,important
-@@||youtube.com^$media,important
-@@||vimeo.com^$media,important
-@@*cdn*$media,important
-@@*stream*$media,important
-@@*video*$media,important
-@@*player*$media,important
-@@$media,important
-
-! =============================================================
-! 6. INTERFACE CLEANER
-! =============================================================
-||adblock-detector^$script,important,strict
-||adblock-detection^$script,important,strict
+! Tells the browser engine not to waste CPU power scanning elements for ad rules
 @@||*^$generichide
 @@||*^$ghide
