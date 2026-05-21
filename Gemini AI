@@ -1,30 +1,80 @@
 [Adblock Plus 2.0]
-! Title: LogicGlitched 60MB/s Extreme Speed Force
-! Version: 28.2.0
+! Title: LogicGlitched Universal Redirect Blocker + Strong AI Protection
+! Version: 28.6.0
+! Expires: 6 hours
+! Description: Strong universal redirect blocker with enhanced AI workspace protection
 
-@@||gemini.google.com^$important
-@@||chatgpt.com^$important
-@@||claude.ai^$important
-@@||github.com^$important
+! =============================================================
+! 1. STRONG AI & DEV WORKSPACE WHITELIST (MUST STAY AT VERY TOP)
+! =============================================================
+@@||gemini.google.com^$xhr,websocket,script,important
+@@||google.com^$xhr,websocket,script,important
+@@||chatgpt.com^$xhr,websocket,script,important
+@@||claude.ai^$xhr,websocket,script,important
+@@||openai.com^$xhr,websocket,script,important
+@@||github.com^$xhr,websocket,script,subdocument,important
+@@||githubusercontent.com^$xhr,script,important
+@@||githubapp.com^$xhr,subdocument,script,important
+@@||drive.google.com^$xhr,subdocument,script,important
+@@||firebaseio.com^$websocket,xhr,important
+@@||*.googleapis.com^$xhr,important
+@@||*.gstatic.com^$script,important
+@@||*.firebase.com^$important
 
-! === EXTREME SPEED BOOST ===
-##+js(set, download_delay, 0)
-##+js(set, wait_time, 0)
-##+js(set, timeout, 0)
-##+js(set, delay, 0)
-##+js(set, countdown, 0)
-##+js(set, timer, 0)
-##+js(set, seconds, 0)
-##+js(set, timeLeft, 0)
-##+js(set, downloadSpeed, 999999999)
-##+js(set, speed, 999)
-##+js(set, currentSpeed, 999)
-##+js(set, maxDownloadSpeed, 999999999)
+! =============================================================
+! 2. UNIVERSAL REDIRECT BLOCKER (Works on all other websites)
+! =============================================================
+! Common redirect & shortener domains
+||adf.ly^$important
+||bit.ly^$important
+||tinyurl.com^$important
+||ouo.io^$important
+||linkvertise.com^$important
+||shorte.st^$important
+||clk.*^$important
+||redir.*^$important
+||redirect.*^$important
+||go.*^$important
+||track.*^$important
+||affiliate.*^$important
+||exit.*^$important
 
-##+js(no-setTimeout-if, /.*/i, 10)
-##+js(no-setInterval-if, /.*/i, 10)
-##+js(nano-stb, *, *, 0.001)
-##+js(nano-sib, *, *, 0.001)
+! Redirect path blocking
+||/redirect^$important
+||/redir^$important
+||/go/^$important
+||/out/^$important
+||/link/^$important
+||/click/^$important
 
-##+js(aeld, click)
-##+js(aeld, mousedown)
+! =============================================================
+! 3. JAVASCRIPT REDIRECT KILLER
+! =============================================================
+##+js(no-setTimeout-if, /location|redirect|window\.open|href/i)
+##+js(no-setInterval-if, /location|redirect|window\.open|href/i)
+
+##+js(set, location.href, undefined, true)
+##+js(set, window.location, undefined, true)
+##+js(set, document.location, undefined, true)
+
+##+js(window.open-defuser)
+##+js(aeld, click, window.open)
+##+js(aeld, load, redirect)
+
+! Block meta refresh redirects
+##meta[http-equiv="refresh"]$removeattr
+
+! =============================================================
+! 4. MALVERTISING & POPUP REDIRECTS
+! =============================================================
+||popads.net^$important
+||popcash.net^$important
+||propellerads.com^$important
+||exoclick.com^$important
+||adsco.re^$important
+
+! =============================================================
+! 5. CLEANUP
+! =============================================================
+@@||*^$generichide
+@@||*^$ghide
