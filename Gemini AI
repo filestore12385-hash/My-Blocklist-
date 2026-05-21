@@ -1,83 +1,119 @@
-[Adblock Plus 2.0]
-! Title: LogicGlitched 100% Test-Pass Aggressive Engine
-! Version: 24.0.0 (Ultimate Firewall & 100% AdBlock Tester Matrix)
-! Expires: 1 hour
-! -------------------------------------------------------------
+! Title: LogicGlitched Ultimate 2026.2 - Final Full Advanced
+! Version: 24.4.0
+! Expires: 6 hours
+! Description: Maximum worldwide ad/malware/phishing block with safe AI/dev exemptions
 
 ! =============================================================
-! 1. THE AI WORKSPACE PROTECTION GATEWAY (ZERO PERFORMANCE LAG)
+! 1. AI / DEV WORKSPACE WHITELIST (MUST REMAIN AT THE VERY TOP)
 ! =============================================================
-! Bypasses the test firewall ONLY for your live AI streams and developer repositories
 @@||gemini.google.com^$xhr,websocket,script,important
-@@||google.com/search/streaming^$xhr,important
-@@/^(https?:)?\/\/([^\/]+)?gemini\.google\.com\/.*$/$xhr,websocket,important
 @@||chatgpt.com^$xhr,websocket,script,important
 @@||claude.ai^$xhr,websocket,script,important
-@@||github.com^$xhr,subdocument,script,important
-@@||githubapp.com^$xhr,subdocument,script,important
+@@||openai.com^$xhr,websocket,script,important
+@@||github.com^$xhr,websocket,script,subdocument,important
+@@||githubusercontent.com^$xhr,script,important
 @@||drive.google.com^$xhr,subdocument,script,important
 @@||firebaseio.com^$websocket,xhr,important
+@@||*.googleapis.com^$xhr,important
+@@||*.gstatic.com^$script,important
+@@||*.firebase.com^$important
 
 ! =============================================================
-! 2. SCRIPT & HOST MATRIX (TARGETS ALL 100% TEST DOMAINS)
+! 2. ULTRA-AGGRESSIVE GLOBAL ADS + TRACKERS + MALVERTISING
 ! =============================================================
-! Drops corporate ad scripts, metrics trackers, and testing paths instantly
-||doubleclick.net^$script,third-party,important,strict
-||pagead2.googlesyndication.com^$script,important,strict
-||google-analytics.com^$script,third-party,important,strict
-||googletagmanager.com^$script,third-party,important,strict
-||googleanalytics.com^$script,important,strict
-||scorecardresearch.com^$script,third-party,important,strict
-||facebook.net^$script,third-party,important,strict
-||facebook.com^$script,third-party,badfilter
-||yandex.ru^$script,important,strict
-||an.yandex.ru^$script,important,strict
-||sentry.io^$script,third-party,important,strict
-||crashlytics.com^$script,third-party,important,strict
-*$ping,third-party,important,strict
-*$beacon,third-party,important,strict
+||doubleclick.net^$important
+||googlesyndication.com^$important
+||pagead2.googlesyndication.com^$important
+||googletagmanager.com^$important
+||google-analytics.com^$important
+||googleadservices.com^$important
+||analytics.*^$important
+||pixel.*^$important
+||beacon.*^$important
+||metrics.*^$important
+||scorecardresearch.com^$important
+||facebook.net^$third-party,important
+||connect.facebook.net^$important
+
+! Major ad & malvertising networks
+||popads.net^$important
+||popcash.net^$important
+||propellerads.com^$important
+||exoclick.com^$important
+||adsco.re^$important
+||clkmg.com^$important
+||adserver.*^$important
+||adservice.*^$important
+||ad-delivery.net^$important
+||ad.doubleclick.net^$important
+
+! Aggressive general blocks
+*$ping,third-party,important
+*$beacon,third-party,important
+*$tracking,important
+*$third-party,script,domain=~github.com|~google.com|~chatgpt.com|~claude.ai|~gemini.google.com|~openai.com,important
 
 ! =============================================================
-! 3. MALWARE, SPAM, & REDIRECT POPUP CRUSHER 
+! 3. MALWARE + PHISHING + SCAM + EXPLOIT PROTECTION
 ! =============================================================
-||popads.net^$script,important,strict
-||popcash.net^$script,important,strict
-||propellerads.com^$script,important,strict
-||exoclick.com^$script,important,strict
-||adsco.re^$script,important,strict
-||coinmarketads.com^$script,important,strict
-||clkmg.com^$script,important,strict
+! High-risk TLDs (common for malware/phishing)
+||*.xyz^$third-party,important
+||*.top^$third-party,important
+||*.fun^$third-party,important
+||*.ru^$third-party,script,important
+||*.cn^$third-party,script,important
+||*.tk^$important
+||*.ml^$important
+||*.ga^$important
+||*.cf^$important
+||*.gq^$important
+
+! Common malicious paths & patterns
+||/wp-content/uploads/.*\.(exe|zip|rar)^$important
+||/download/.*\.(exe|zip)^$important
+||click.*\.com^$important
+||track.*\.com^$important
+||redir.*^$important
+||go.*\.com^$important
 
 ! =============================================================
-! 4. COSMETIC DOM TESTING & BEHAVIORAL ELEMENT HIDING
+! 4. ANTI-ANTI-ADBLOCK + DETECTOR BYPASS
 ! =============================================================
-! Hides generic banner blocks and fake testing structures automatically
+@@||*^$generichide
+@@||*^$ghide
+||adblock-detector^$important
+||adblock-detection^$important
+||detect-adblock^$important
+||antiadblock^$important
+||fuckadblock^$important
+||adblocktest^$important
+
+! =============================================================
+! 5. COSMETIC + SCRIPTLET RULES (Visual cleanup + behavior defusing)
+! =============================================================
 ##.ads
+##.ad-container
 ##.ad-box
 ##.adsbygoogle
-##[id^="ad-"]
-##[class^="ad-"]
-##div[class*="sponsor"]
-##div[id*="sponsor"]
+##[id*="ad-"]
+##[class*="ad-"]
+##[id*="sponsor"]
+##[class*="sponsor"]
+##div[class*="banner"]
+##.popup
+##.modal
+##.overlay
+##.interstitial
 
-! Defuses deceptive background click hijack listeners inside active threads
-##+js(addEventListener-defuser, click)
-##+js(addEventListener-defuser, mousedown)
-##+js(addEventListener-defuser, submit)
-
-! =============================================================
-! 5. TIMEOUT OVERRIDE ACCELERATOR
-! =============================================================
-! Forces layout countdown clocks straight to zero milliseconds
+! Defuse click hijacks, fake timers, and anti-adblock tricks
+##+js(aeld, click)
+##+js(aeld, mousedown)
+##+js(aeld, submit)
 ##+js(set, download_delay, 0)
 ##+js(set, wait_time, 0)
 ##+js(set, timeout, 0)
 ##+js(set, delay, 0)
-
-! =============================================================
-! 6. OVERHEAD SYSTEM BYPASS
-! =============================================================
-||adblock-detector^$script,important,strict
-||adblock-detection^$script,important,strict
-@@||*^$generichide
-@@||*^$ghide
+##+js(set, adblock, false)
+##+js(set, adBlockDetected, false)
+##+js(set, isAdBlockerDetected, false)
+##+js(set, blocked, false)
