@@ -1,72 +1,30 @@
 [Adblock Plus 2.0]
-! Title: LogicGlitched Ultimate Aggressive All-In-One Matrix
-! Version: 27.0.0 (Multi + Pro + Pro.Plus + Ultimate + Live AI Merged Core)
-! Expires: 1 hour
-! -------------------------------------------------------------
+! Title: LogicGlitched 60MB/s Extreme Speed Force
+! Version: 28.2.0
 
-! =============================================================
-! 1. THE AI WORKSPACE HIGH-SPEED GATEWAY (BYPASSES ALL BLOCKS)
-! =============================================================
-! Forces high-priority live whitelisting for your exact AI streaming sockets
-@@||gemini.google.com^$xhr,websocket,script,important
-@@||google.com/search/streaming^$xhr,important
-@@/^(https?:)?\/\/([^\/]+)?gemini\.google\.com\/.*$/$xhr,websocket,important
-@@||chatgpt.com^$xhr,websocket,script,important
-@@||claude.ai^$xhr,websocket,script,important
+@@||gemini.google.com^$important
+@@||chatgpt.com^$important
+@@||claude.ai^$important
+@@||github.com^$important
 
-! =============================================================
-! 2. REPOSITORY & WORKSPACE PERSISTENCE LINES
-! =============================================================
-! Guarantees GitHub commits and asset sync pools never get intercepted or dropped
-@@||github.com^$xhr,subdocument,script,important
-@@||githubapp.com^$xhr,subdocument,script,important
-@@||drive.google.com^$xhr,subdocument,script,important
-@@||firebaseio.com^$websocket,xhr,important
-
-! =============================================================
-! 3. DYNAMIC FOUR-LIST DIRECT SOURCE INJECTION
-! =============================================================
-! Merges and compiles all four specified network lists inside a single execution pipeline
-!#include https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/multi.txt
-!#include https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/pro.txt
-!#include https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/pro.plus.txt
-!#include https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/ultimate.txt
-
-! =============================================================
-! 4. TEST-PASS COSMETIC ELEMENT MATRIX (100% CLEAN LAYOUT)
-! =============================================================
-! Wipes out remaining visual placeholders and fake testing ad blocks
-##.ads
-##.ad-box
-##.adsbygoogle
-##[id^="ad-"]
-##[class^="ad-"]
-##div[class*="sponsor"]
-##div[id*="sponsor"]
-
-! Defuses malicious popups and silent click hijack listeners instantly
-||popads.net^$script,important,strict
-||popcash.net^$script,important,strict
-||propellerads.com^$script,important,strict
-||adsco.re^$script,important,strict
-
-##+js(addEventListener-defuser, click)
-##+js(addEventListener-defuser, mousedown)
-##+js(addEventListener-defuser, submit)
-
-! =============================================================
-! 5. TIMEOUT ACCELERATION ENGINE (COUNTDOWN BYPASS)
-! =============================================================
-! Commands download site layout scripts to instantly resolve wait counters to 0
+! === EXTREME SPEED BOOST ===
 ##+js(set, download_delay, 0)
 ##+js(set, wait_time, 0)
 ##+js(set, timeout, 0)
 ##+js(set, delay, 0)
+##+js(set, countdown, 0)
+##+js(set, timer, 0)
+##+js(set, seconds, 0)
+##+js(set, timeLeft, 0)
+##+js(set, downloadSpeed, 999999999)
+##+js(set, speed, 999)
+##+js(set, currentSpeed, 999)
+##+js(set, maxDownloadSpeed, 999999999)
 
-! =============================================================
-! 6. OVERHEAD SYSTEM BYPASS
-! =============================================================
-||adblock-detector^$script,important,strict
-||adblock-detection^$script,important,strict
-@@||*^$generichide
-@@||*^$ghide
+##+js(no-setTimeout-if, /.*/i, 10)
+##+js(no-setInterval-if, /.*/i, 10)
+##+js(nano-stb, *, *, 0.001)
+##+js(nano-sib, *, *, 0.001)
+
+##+js(aeld, click)
+##+js(aeld, mousedown)
