@@ -1,22 +1,22 @@
 [Adblock Plus 2.0]
-! Title: LogicGlitched Pure AI & Page Fast-Track Engine
-! Version: 17.0.0 (Zero Adblocking - Maximum Page Load Speed Core)
+! Title: LogicGlitched Master Fast-Track Configuration
+! Version: 19.0.0 (Ultimate High-Speed Workspace & Page Core)
 ! Expires: 1 hour
 ! -------------------------------------------------------------
 
 ! =============================================================
 ! 1. LIVE AI STREAM ACCELERATOR (ZERO PROMPT LAG)
 ! =============================================================
-! Bypasses layout processing blocks so Gemini streams sentences word-by-word instantly
+! Bypasses all layout processing blocks so Gemini streams responses word-by-word instantly
 @@||gemini.google.com^$xhr,websocket,script,important
 @@||google.com/search/streaming^$xhr,important
 @@||chatgpt.com^$xhr,websocket,script,important
 @@||claude.ai^$xhr,websocket,script,important
 
 ! =============================================================
-! 2. WORKSPACE SPEED LANES (FAST-TRACK REPOSITORIES & DRIVES)
+! 2. WORKSPACE PERFORMANCE LANES (MAXIMUM REPOSITORY SPEED)
 ! =============================================================
-! Ensures background dev tools and syncing networks run completely unrestricted
+! Ensures background development tools and cloud arrays run completely unrestricted
 @@||github.com^$xhr,subdocument,script,important
 @@||githubapp.com^$xhr,subdocument,script,important
 @@||google.com^$xhr,subdocument,script,important
@@ -26,15 +26,15 @@
 ! =============================================================
 ! 3. LAYOUT TIMER OVERRIDE (INSTANTLY UNLOCKS DOWNLOADS)
 ! =============================================================
-! Automatically forces webpage countdown variables down to 0 milliseconds
+! Automatically forces webpage countdown and delay variables down to 0 milliseconds
 ##+js(set, download_delay, 0)
 ##+js(set, wait_time, 0)
 ##+js(set, timeout, 0)
 ##+js(set, delay, 0)
 
 ! =============================================================
-! 4. GENERIC BYPASS (TURNS OFF CONTENT FILTERING OVERHEAD)
+! 4. SYSTEM OVERHEAD BYPASS (ELIMINATES FILTERING DELAYS)
 ! =============================================================
-! Tells the browser engine not to waste CPU power scanning elements for ad rules
+! Tells the browser engine to completely stop scanning code layers for cosmetic ad rules
 @@||*^$generichide
 @@||*^$ghide
