@@ -1,78 +1,70 @@
 [Adblock Plus 2.0]
-! Title: LogicGlitched Ultimate Final Master 2026
-! Version: 30.0.0 - FINAL
-! Expires: 6 hours
-! Description: Final All-in-One - AI Safe + Redirect Blocker + Download Speed
+! Title: LogicGlitched New-Priority Universal Engine
+! Version: 32.0.0 (Fresh Upload Priority Matrix & Live AI Core)
+! Expires: 1 hour
+! -------------------------------------------------------------
 
 ! =============================================================
-! 1. AI & DEV WORKSPACE - STRONG WHITELIST (MUST STAY AT TOP)
+! 1. THE LIVE AI SPEEDWAY (ZERO PROMPT BUFFERING)
 ! =============================================================
+! High-priority bypass rules ensuring Gemini types live word-by-word with zero delay
 @@||gemini.google.com^$xhr,websocket,script,important
+@@||google.com/search/streaming^$xhr,important
+@@/^(https?:)?\/\/([^\/]+)?gemini\.google\.com\/.*$/$xhr,websocket,important
 @@||chatgpt.com^$xhr,websocket,script,important
 @@||claude.ai^$xhr,websocket,script,important
-@@||openai.com^$xhr,websocket,script,important
-@@||github.com^$xhr,websocket,script,subdocument,important
-@@||githubusercontent.com^$xhr,script,important
+
+! =============================================================
+! 2. UNIVERSAL SEARCH ENGINE & APP SYNC LANES
+! =============================================================
+! Fast-tracks localized searches and key developer channels so they never drop
+@@/^(https?:)?\/\/([^\/]+)?\.google\..*\/search.*$/$xhr,important
+@@||github.com^$xhr,subdocument,script,important
+@@||githubapp.com^$xhr,subdocument,script,important
 @@||drive.google.com^$xhr,subdocument,script,important
-@@||*.googleapis.com^$xhr,important
-@@||*.gstatic.com^$script,important
+@@||firebaseio.com^$websocket,xhr,important
 
 ! =============================================================
-! 2. UNIVERSAL REDIRECT BLOCKER
+! 3. FRESH UPLOAD PRIORITY POOL (MOST RECENT DOMAINS RUN FIRST)
 ! =============================================================
-||adf.ly^$important
-||bit.ly^$important
-||tinyurl.com^$important
-||ouo.io^$important
-||linkvertise.com^$important
-||shorte.st^$important
-||redir.*^$important
-||redirect.*^$important
-||go.*^$important
-||track.*^$important
-
-||/redirect^$important
-||/redir^$important
-||/go/^$important
+! Ordered sequentially so the newest, most aggressive updates process first in the engine queue
+!#include https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/ultimate.txt
+!#include https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/pro.plus.txt
+!#include https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/pro.txt
+!#include https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/multi.txt
 
 ! =============================================================
-! 3. JAVASCRIPT REDIRECT & POPUP KILLER
+! 4. UNIVERSAL ACCELERATION & LAYOUT TIMER OVERRIDE
 ! =============================================================
-##+js(no-setTimeout-if, /location|redirect|window\.open|href/i)
-##+js(no-setInterval-if, /location|redirect|window\.open|href/i)
-##+js(window.open-defuser)
-##+js(aeld, click, window.open)
-
-! =============================================================
-! 4. DOWNLOAD SPEED BOOSTER
-! =============================================================
+! Overrides webpage countdown counters and forces wait times directly to 0ms
 ##+js(set, download_delay, 0)
 ##+js(set, wait_time, 0)
 ##+js(set, timeout, 0)
 ##+js(set, delay, 0)
-##+js(set, countdown, 0)
-##+js(set, timer, 0)
-##+js(set, seconds, 0)
-##+js(set, timeLeft, 0)
 
-##+js(set, downloadSpeed, 60000000)
-##+js(set, speed, 60)
-##+js(set, currentSpeed, 60)
-
-##+js(no-setTimeout-if, /countdown|timer|delay|wait/i)
-##+js(no-setInterval-if, /countdown|timer|delay|wait/i)
-##+js(nano-stb)
-##+js(nano-sib)
+! Defuses stealth click-hijack layers inside active browser processing threads
+##+js(addEventListener-defuser, click)
+##+js(addEventListener-defuser, mousedown)
+##+js(addEventListener-defuser, submit)
 
 ! =============================================================
-! 5. MALVERTISING BLOCK
+! 5. UNIVERSAL FIREWALL MATRIX (STRICT NETWORK DROP)
 ! =============================================================
-||popads.net^$important
-||popcash.net^$important
-||propellerads.com^$important
+||doubleclick.net^$script,third-party,important,strict
+||scorecardresearch.com^$script,third-party,important,strict
+||google-analytics.com^$script,third-party,important,strict
+||googletagmanager.com^$script,third-party,important,strict
+||facebook.net^$script,third-party,important,strict
+||popads.net^$script,important,strict
+||popcash.net^$script,important,strict
+||adsco.re^$script,important,strict
+*$ping,third-party,important,strict
+*$beacon,third-party,important,strict
 
 ! =============================================================
-! 6. CLEANUP
+! 6. HARDWARE PARSING BYPASS
 ! =============================================================
+||adblock-detector^$script,important,strict
+||adblock-detection^$script,important,strict
 @@||*^$generichide
 @@||*^$ghide
