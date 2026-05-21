@@ -1,30 +1,26 @@
 [Adblock Plus 2.0]
-! Title: LogicGlitched Universal Redirect Blocker + Strong AI Protection
-! Version: 28.6.0
+! Title: LogicGlitched Universal Redirect Blocker + 100% AI Safe
+! Version: 29.0.0
 ! Expires: 6 hours
-! Description: Strong universal redirect blocker with enhanced AI workspace protection
+! Description: Balanced & Reliable - Strong Redirect Block + Full AI Protection
 
 ! =============================================================
-! 1. STRONG AI & DEV WORKSPACE WHITELIST (MUST STAY AT VERY TOP)
+! 1. AI & DEV WORKSPACE - STRONG WHITELIST (MUST STAY AT TOP)
 ! =============================================================
-@@||gemini.google.com^$xhr,websocket,script,important
-@@||google.com^$xhr,websocket,script,important
-@@||chatgpt.com^$xhr,websocket,script,important
-@@||claude.ai^$xhr,websocket,script,important
-@@||openai.com^$xhr,websocket,script,important
+@@||gemini.google.com^$xhr,websocket,script,domain=gemini.google.com,important
+@@||chatgpt.com^$xhr,websocket,script,domain=chatgpt.com,important
+@@||claude.ai^$xhr,websocket,script,domain=claude.ai,important
+@@||openai.com^$xhr,websocket,script,domain=openai.com,important
 @@||github.com^$xhr,websocket,script,subdocument,important
 @@||githubusercontent.com^$xhr,script,important
-@@||githubapp.com^$xhr,subdocument,script,important
 @@||drive.google.com^$xhr,subdocument,script,important
-@@||firebaseio.com^$websocket,xhr,important
 @@||*.googleapis.com^$xhr,important
 @@||*.gstatic.com^$script,important
-@@||*.firebase.com^$important
 
 ! =============================================================
-! 2. UNIVERSAL REDIRECT BLOCKER (Works on all other websites)
+! 2. UNIVERSAL REDIRECT BLOCKER
 ! =============================================================
-! Common redirect & shortener domains
+! Popular redirect & shortener domains
 ||adf.ly^$important
 ||bit.ly^$important
 ||tinyurl.com^$important
@@ -39,7 +35,7 @@
 ||affiliate.*^$important
 ||exit.*^$important
 
-! Redirect path blocking
+! Redirect path blocker
 ||/redirect^$important
 ||/redir^$important
 ||/go/^$important
@@ -48,24 +44,21 @@
 ||/click/^$important
 
 ! =============================================================
-! 3. JAVASCRIPT REDIRECT KILLER
+! 3. JAVASCRIPT REDIRECT & POPUP BLOCKER
 ! =============================================================
 ##+js(no-setTimeout-if, /location|redirect|window\.open|href/i)
 ##+js(no-setInterval-if, /location|redirect|window\.open|href/i)
 
-##+js(set, location.href, undefined, true)
-##+js(set, window.location, undefined, true)
-##+js(set, document.location, undefined, true)
-
 ##+js(window.open-defuser)
 ##+js(aeld, click, window.open)
+##+js(aeld, mousedown, window.open)
 ##+js(aeld, load, redirect)
 
 ! Block meta refresh redirects
 ##meta[http-equiv="refresh"]$removeattr
 
 ! =============================================================
-! 4. MALVERTISING & POPUP REDIRECTS
+! 4. MALVERTISING NETWORKS
 ! =============================================================
 ||popads.net^$important
 ||popcash.net^$important
@@ -74,7 +67,7 @@
 ||adsco.re^$important
 
 ! =============================================================
-! 5. CLEANUP
+! 5. FINAL CLEANUP
 ! =============================================================
 @@||*^$generichide
 @@||*^$ghide
