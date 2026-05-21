@@ -1,16 +1,16 @@
 [Adblock Plus 2.0]
-! Title: LogicGlitched Universal Redirect Blocker + 100% AI Safe
-! Version: 29.0.0
+! Title: LogicGlitched Ultimate Final Master 2026
+! Version: 30.0.0 - FINAL
 ! Expires: 6 hours
-! Description: Balanced & Reliable - Strong Redirect Block + Full AI Protection
+! Description: Final All-in-One - AI Safe + Redirect Blocker + Download Speed
 
 ! =============================================================
 ! 1. AI & DEV WORKSPACE - STRONG WHITELIST (MUST STAY AT TOP)
 ! =============================================================
-@@||gemini.google.com^$xhr,websocket,script,domain=gemini.google.com,important
-@@||chatgpt.com^$xhr,websocket,script,domain=chatgpt.com,important
-@@||claude.ai^$xhr,websocket,script,domain=claude.ai,important
-@@||openai.com^$xhr,websocket,script,domain=openai.com,important
+@@||gemini.google.com^$xhr,websocket,script,important
+@@||chatgpt.com^$xhr,websocket,script,important
+@@||claude.ai^$xhr,websocket,script,important
+@@||openai.com^$xhr,websocket,script,important
 @@||github.com^$xhr,websocket,script,subdocument,important
 @@||githubusercontent.com^$xhr,script,important
 @@||drive.google.com^$xhr,subdocument,script,important
@@ -20,54 +20,59 @@
 ! =============================================================
 ! 2. UNIVERSAL REDIRECT BLOCKER
 ! =============================================================
-! Popular redirect & shortener domains
 ||adf.ly^$important
 ||bit.ly^$important
 ||tinyurl.com^$important
 ||ouo.io^$important
 ||linkvertise.com^$important
 ||shorte.st^$important
-||clk.*^$important
 ||redir.*^$important
 ||redirect.*^$important
 ||go.*^$important
 ||track.*^$important
-||affiliate.*^$important
-||exit.*^$important
 
-! Redirect path blocker
 ||/redirect^$important
 ||/redir^$important
 ||/go/^$important
-||/out/^$important
-||/link/^$important
-||/click/^$important
 
 ! =============================================================
-! 3. JAVASCRIPT REDIRECT & POPUP BLOCKER
+! 3. JAVASCRIPT REDIRECT & POPUP KILLER
 ! =============================================================
 ##+js(no-setTimeout-if, /location|redirect|window\.open|href/i)
 ##+js(no-setInterval-if, /location|redirect|window\.open|href/i)
-
 ##+js(window.open-defuser)
 ##+js(aeld, click, window.open)
-##+js(aeld, mousedown, window.open)
-##+js(aeld, load, redirect)
-
-! Block meta refresh redirects
-##meta[http-equiv="refresh"]$removeattr
 
 ! =============================================================
-! 4. MALVERTISING NETWORKS
+! 4. DOWNLOAD SPEED BOOSTER
+! =============================================================
+##+js(set, download_delay, 0)
+##+js(set, wait_time, 0)
+##+js(set, timeout, 0)
+##+js(set, delay, 0)
+##+js(set, countdown, 0)
+##+js(set, timer, 0)
+##+js(set, seconds, 0)
+##+js(set, timeLeft, 0)
+
+##+js(set, downloadSpeed, 60000000)
+##+js(set, speed, 60)
+##+js(set, currentSpeed, 60)
+
+##+js(no-setTimeout-if, /countdown|timer|delay|wait/i)
+##+js(no-setInterval-if, /countdown|timer|delay|wait/i)
+##+js(nano-stb)
+##+js(nano-sib)
+
+! =============================================================
+! 5. MALVERTISING BLOCK
 ! =============================================================
 ||popads.net^$important
 ||popcash.net^$important
 ||propellerads.com^$important
-||exoclick.com^$important
-||adsco.re^$important
 
 ! =============================================================
-! 5. FINAL CLEANUP
+! 6. CLEANUP
 ! =============================================================
 @@||*^$generichide
 @@||*^$ghide
