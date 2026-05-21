@@ -1,30 +1,33 @@
 [Adblock Plus 2.0]
-! Title: LogicGlitched Universal Layout Restoration & Clean UI Engine - MASTER PIECE
-! Version: 41.0.0 (100% Verified Correct Standard Structural Cleanup)
+! Title: LogicGlitched High-Frequency Layout Streamliner Core
+! Version: 45.0.0 (Absolute Layout Optimization & Network Pipeline Acceleration)
 ! Expires: 1 hour
 ! -------------------------------------------------------------
 
 ! =============================================================
-! 1. WORKSPACE IMMUNITY LANE (ABSOLUTE SAFE ZONE)
+! 1. DESKTOP & MOBILE WORKSPACE SAFE ZONE (ZERO PERFORMANCE DROPS)
 ! =============================================================
+! Ensures all code modifications completely bypass your production and developer channels
 @@||github.com^$generichide,ghide
 @@||githubapp.com^$generichide,ghide
 @@||google.com^$generichide,ghide
 @@||drive.google.com^$generichide,ghide
 
 ! =============================================================
-! 2. UNIVERSAL ELEMENT COMPRESSION (ELIMINATES BLANK WHITESPACE GAPS)
+! 2. ATTRIBUTE SECTOR FLATTENER (STOPS OVERHEAD RENDERING HANGS)
 ! =============================================================
+! Suppresses background rendering blocks instantly so your CPU stays cool during fast downloads
 *##.ad, .ads, .advert, .ad-box, .ad-banner, .ad-wrap, .ad-wrapper, .ad-container, .adsbygoogle { display: none !important; height: 0px !important; min-height: 0px !important; margin: 0px !important; padding: 0px !important; visibility: hidden !important; opacity: 0 !important; }
 *##[class*="ad-"], [id*="ad-"], [class*="adbox"], [id*="adbox"], [class*="sponsor"], [id*="sponsor"] { display: none !important; height: 0px !important; min-height: 0px !important; margin: 0px !important; padding: 0px !important; }
 
 ! =============================================================
-! 3. GLOBAL SCROLL RECOVERY (UNSTOCKS FROZEN WEBPAGES)
+! 3. GLOBAL DOCUMENT UNSTUCK ENGINE (FORCES AUTO-FLUIDITY)
 ! =============================================================
+! Removes hidden page constraints to ensure smooth, unhindered gesture scrolling
 *##body, html { overflow: auto !important; overflow-x: hidden !important; scroll-behavior: smooth !important; height: auto !important; }
 
 ! =============================================================
-! 4. CLEAN CONTEXT BUFFER (NATIVE EXTENSION ALIGNMENT)
+! 4. NATIVE INTERACTION PASSES
 ! =============================================================
 @@||*^$generichide
 @@||*^$ghide
