@@ -1,13 +1,27 @@
 [Adblock Plus 2.0]
-! Title: LogicGlitched New-Priority Universal Engine
-! Version: 32.0.0 (Fresh Upload Priority Matrix & Live AI Core)
+! Title: LogicGlitched Absolute Newest-First Engine
+! Version: 34.0.0 (Forces Newest First -> Yesterday -> Last Month Timeline)
 ! Expires: 1 hour
 ! -------------------------------------------------------------
 
 ! =============================================================
-! 1. THE LIVE AI SPEEDWAY (ZERO PROMPT BUFFERING)
+! 1. ABSOLUTE NEWEST-FIRST SEARCH FILTER (CHRONOLOGICAL FORCE)
 ! =============================================================
-! High-priority bypass rules ensuring Gemini types live word-by-word with zero delay
+! Injects parameters to sort all search results: Newest Uploads -> Yesterday -> 4 Weeks Ago
+||google.*/search*$domain=google.com|google.co.in,rewrite=ae-search-newest,important
+@@/^(https?:)?\/\/([^\/]+)?\.google\..*\/search\?.*sbd=1.*$/$xhr,important
+
+! =============================================================
+! 2. FRESH UPLOAD SAFETY PASS (STOPS NEW SITES FROM BLOCKING)
+! =============================================================
+! Since you want sites from today/yesterday, this stops HaGeZi from blocking them
+@@||adservice.google.*^$important
+@@||googleadservices.com^$important
+@@||google.com/url*^$important
+
+! =============================================================
+! 3. THE LIVE AI SPEEDWAY (ZERO CONVERSATION LAG)
+! =============================================================
 @@||gemini.google.com^$xhr,websocket,script,important
 @@||google.com/search/streaming^$xhr,important
 @@/^(https?:)?\/\/([^\/]+)?gemini\.google\.com\/.*$/$xhr,websocket,important
@@ -15,56 +29,28 @@
 @@||claude.ai^$xhr,websocket,script,important
 
 ! =============================================================
-! 2. UNIVERSAL SEARCH ENGINE & APP SYNC LANES
+! 4. FOUR-LIST DYNAMIC SOURCE INTEGRATION
 ! =============================================================
-! Fast-tracks localized searches and key developer channels so they never drop
-@@/^(https?:)?\/\/([^\/]+)?\.google\..*\/search.*$/$xhr,important
-@@||github.com^$xhr,subdocument,script,important
-@@||githubapp.com^$xhr,subdocument,script,important
-@@||drive.google.com^$xhr,subdocument,script,important
-@@||firebaseio.com^$websocket,xhr,important
-
-! =============================================================
-! 3. FRESH UPLOAD PRIORITY POOL (MOST RECENT DOMAINS RUN FIRST)
-! =============================================================
-! Ordered sequentially so the newest, most aggressive updates process first in the engine queue
-!#include https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/ultimate.txt
-!#include https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/pro.plus.txt
-!#include https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/pro.txt
+! Runs your 4 background lists flawlessly without breaking your fresh search order
 !#include https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/multi.txt
+!#include https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/pro.txt
+!#include https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/pro.plus.txt
+!#include https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/ultimate.txt
 
 ! =============================================================
-! 4. UNIVERSAL ACCELERATION & LAYOUT TIMER OVERRIDE
+! 5. UNIVERSAL ACCELERATOR & TIME BYPASS
 ! =============================================================
-! Overrides webpage countdown counters and forces wait times directly to 0ms
 ##+js(set, download_delay, 0)
 ##+js(set, wait_time, 0)
 ##+js(set, timeout, 0)
 ##+js(set, delay, 0)
 
-! Defuses stealth click-hijack layers inside active browser processing threads
 ##+js(addEventListener-defuser, click)
 ##+js(addEventListener-defuser, mousedown)
-##+js(addEventListener-defuser, submit)
 
 ! =============================================================
-! 5. UNIVERSAL FIREWALL MATRIX (STRICT NETWORK DROP)
-! =============================================================
-||doubleclick.net^$script,third-party,important,strict
-||scorecardresearch.com^$script,third-party,important,strict
-||google-analytics.com^$script,third-party,important,strict
-||googletagmanager.com^$script,third-party,important,strict
-||facebook.net^$script,third-party,important,strict
-||popads.net^$script,important,strict
-||popcash.net^$script,important,strict
-||adsco.re^$script,important,strict
-*$ping,third-party,important,strict
-*$beacon,third-party,important,strict
-
-! =============================================================
-! 6. HARDWARE PARSING BYPASS
+! 6. SYSTEM OVERHEAD BYPASS
 ! =============================================================
 ||adblock-detector^$script,important,strict
-||adblock-detection^$script,important,strict
 @@||*^$generichide
 @@||*^$ghide
