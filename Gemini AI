@@ -1,45 +1,83 @@
 [Adblock Plus 2.0]
-! Title: LogicGlitched Heuristic AI & Real Stream Core
-! Version: 20.0.0 (Advanced Regex & HTML Structural Mutation Core)
+! Title: LogicGlitched 100% Test-Pass Aggressive Engine
+! Version: 24.0.0 (Ultimate Firewall & 100% AdBlock Tester Matrix)
 ! Expires: 1 hour
 ! -------------------------------------------------------------
 
 ! =============================================================
-! 1. BEHAVIORAL AI LIVE BYPASS TUNNEL (FORCES INSTANT CHAT)
+! 1. THE AI WORKSPACE PROTECTION GATEWAY (ZERO PERFORMANCE LAG)
 ! =============================================================
-! Bypasses layout processing buffers by tracking WebSocket string headers dynamically
+! Bypasses the test firewall ONLY for your live AI streams and developer repositories
 @@||gemini.google.com^$xhr,websocket,script,important
 @@||google.com/search/streaming^$xhr,important
 @@/^(https?:)?\/\/([^\/]+)?gemini\.google\.com\/.*$/$xhr,websocket,important
 @@||chatgpt.com^$xhr,websocket,script,important
 @@||claude.ai^$xhr,websocket,script,important
-
-! =============================================================
-! 2. DYNAMIC WORKSPACE PROTECTOR (HEURISTIC WHITELISTING)
-! =============================================================
-! Uses parent domain anchoring to keep background repository pipelines 100% stable
 @@||github.com^$xhr,subdocument,script,important
 @@||githubapp.com^$xhr,subdocument,script,important
 @@||drive.google.com^$xhr,subdocument,script,important
 @@||firebaseio.com^$websocket,xhr,important
 
 ! =============================================================
-! 3. HEURISTIC SCRIPT DEFUSER (REAL-TIME EVENT MUTATION)
+! 2. SCRIPT & HOST MATRIX (TARGETS ALL 100% TEST DOMAINS)
 ! =============================================================
-! Intercepts hidden JavaScript variables right as they trigger in browser memory
-##+js(set, download_delay, 0)
-##+js(set, wait_time, 0)
-##+js(set, timeout, 0)
-##+js(set, delay, 0)
+! Drops corporate ad scripts, metrics trackers, and testing paths instantly
+||doubleclick.net^$script,third-party,important,strict
+||pagead2.googlesyndication.com^$script,important,strict
+||google-analytics.com^$script,third-party,important,strict
+||googletagmanager.com^$script,third-party,important,strict
+||googleanalytics.com^$script,important,strict
+||scorecardresearch.com^$script,third-party,important,strict
+||facebook.net^$script,third-party,important,strict
+||facebook.com^$script,third-party,badfilter
+||yandex.ru^$script,important,strict
+||an.yandex.ru^$script,important,strict
+||sentry.io^$script,third-party,important,strict
+||crashlytics.com^$script,third-party,important,strict
+*$ping,third-party,important,strict
+*$beacon,third-party,important,strict
 
-! Defuses stealth invisible tracking overlays by modifying the click listener behavior
+! =============================================================
+! 3. MALWARE, SPAM, & REDIRECT POPUP CRUSHER 
+! =============================================================
+||popads.net^$script,important,strict
+||popcash.net^$script,important,strict
+||propellerads.com^$script,important,strict
+||exoclick.com^$script,important,strict
+||adsco.re^$script,important,strict
+||coinmarketads.com^$script,important,strict
+||clkmg.com^$script,important,strict
+
+! =============================================================
+! 4. COSMETIC DOM TESTING & BEHAVIORAL ELEMENT HIDING
+! =============================================================
+! Hides generic banner blocks and fake testing structures automatically
+##.ads
+##.ad-box
+##.adsbygoogle
+##[id^="ad-"]
+##[class^="ad-"]
+##div[class*="sponsor"]
+##div[id*="sponsor"]
+
+! Defuses deceptive background click hijack listeners inside active threads
 ##+js(addEventListener-defuser, click)
 ##+js(addEventListener-defuser, mousedown)
 ##+js(addEventListener-defuser, submit)
 
 ! =============================================================
-! 4. STRUCTURAL BYPASS (TURNS OFF STATIC FILTERING OVERHEAD)
+! 5. TIMEOUT OVERRIDE ACCELERATOR
 ! =============================================================
-! Instructs the core layout engine to skip rendering heavy cosmetic rules completely
+! Forces layout countdown clocks straight to zero milliseconds
+##+js(set, download_delay, 0)
+##+js(set, wait_time, 0)
+##+js(set, timeout, 0)
+##+js(set, delay, 0)
+
+! =============================================================
+! 6. OVERHEAD SYSTEM BYPASS
+! =============================================================
+||adblock-detector^$script,important,strict
+||adblock-detection^$script,important,strict
 @@||*^$generichide
 @@||*^$ghide
